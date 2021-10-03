@@ -1,0 +1,63 @@
+.dropdown-menu {
+  border: none;
+  animation: fadeIn 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.219) 0px 10px 50px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+@keyframes fadeIn {
+  0% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.cardBox-1 .card-title {
+  width: fit-content;
+}
+.cardBox-1 .card-title::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  display: block;
+  transition-duration: 0.5s;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.cardBox-1 .card:hover .card-title::after {
+  width: 100%;
+  background-color: rgb(14, 143, 255);
+}
+
+/* ----------- pages ------------- */
+
+.pageNews {
+  border-radius: 10px !important;
+  box-shadow: rgba(0, 0, 0, 0.096) 0px 3px 3px 0px !important;
+}
+
+.pageNews h5 {
+  color: black !important;
+}
+.pageNews h5:hover {
+  color: rgb(0, 140, 255) !important;
+}
+
+.pageNews p {
+  color: rgb(94, 94, 94) !important;
+}
+.cardImg {
+  position: relative;
+}
+
+.cardImg .badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
