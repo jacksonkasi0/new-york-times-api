@@ -20,6 +20,8 @@ let BgColor = [
   "danger"
 ];
 
+// break;
+
 async function pageNews(topic) {
   let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=Vw1t790RT5yLalH8YDrpO4kTtQlfyGiM`;
   let responce = await fetch(url);
