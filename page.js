@@ -22,7 +22,7 @@ let BgColor = [
 // break;
 
 async function pageNews(topic) {
-  let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=1h3AiGY91ImEVW6UAot6k3WzumjOZ1ct`;
+  let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=KZNdkE1DMOrsbRmcpMHxZD06nAPqBsER`;
   let responce = await fetch(url);
   let data = await responce.json();
 
