@@ -1,6 +1,5 @@
-let home = document.querySelector(".body-news").innerHTML;
 let news_body = document.querySelector(".body-news");
-
+let home = document.querySelector(".body-news").innerHTML;
 let remove = i => {
   news_body.innerHTML = "";
   news_body.style.marginTop = "26px";
@@ -23,7 +22,7 @@ let BgColor = [
 // break;
 
 async function pageNews(topic) {
-  let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=Vw1t790RT5yLalH8YDrpO4kTtQlfyGiM`;
+  let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=1h3AiGY91ImEVW6UAot6k3WzumjOZ1ct`;
   let responce = await fetch(url);
   let data = await responce.json();
 
