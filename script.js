@@ -25,12 +25,33 @@ let bgColor = [
 
 // break;
 
+let api = [
+  "1NNrIbkg5ZD21202fclBpd7TeEiQIoLe", //
+  "aXVITSt2J2WGnpynKVJc1iAI4DimQT5R", //
+  "J7CYP6rYLytPPqJ4SAbJJADlCLmwT0co", //
+  "aNmj3VBcWpJNsVSOCjIbjkaF7R1zjWMD", //
+  "Sx0QLvXVMEvFsEe97pA6GKZ1UEWw6OSW", //
+  "h2qM9IUqHGn95C8H4qF1rwbCBhe18Bx0", //
+  "VWLFGN5sKe4XADy1SYHuBPNbwqaDYJod", //
+  "g7HMsHOlt1VAt3WgwgqXPjWonAALNwAX", //
+  "vmmiexrUJEnDrJ80HvK8Bg9wXetkjKBv", //
+  "LI7amEnA5U7KG3u2XCWz9AhWkkCfuPje"
+];
+
+let num_api = 0;
+let newsApi = () => {
+  num_api++;
+
+  num_api === api.length + 1 && (num_api = 0);
+};
+
 let GetData = () => {
   num.forEach(i => {
     topic = topicArr[i];
+    let API = api[num_api];
 
     async function getData() {
-      let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=Vw1t790RT5yLalH8YDrpO4kTtQlfyGiM`;
+      let url = `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=${API}`;
       let responce = await fetch(url);
       let data = await responce.json();
       let result = data.results.map(item => item);
